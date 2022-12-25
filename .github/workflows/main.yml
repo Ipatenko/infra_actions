@@ -70,8 +70,9 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          # Выполняет pull образа с DockerHub
+          # Выполняет pull образа с Dock
           sudo docker pull sergeykomi/infra_actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
