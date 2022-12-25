@@ -72,7 +72,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          # Выполняет pull образа с Dockуку
+          # Выполняет pull образа с Docker
           sudo docker pull sergeykomi/infra_actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
