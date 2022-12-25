@@ -74,6 +74,6 @@ jobs:
         script: |
           # Выполняет pull образа с Docker
           sudo docker pull sergeykomi/infra_actions
-          #остановка всех контейнеров
+          #остановка всех контейнера
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 sergeykomi/infra_actions   
